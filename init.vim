@@ -67,6 +67,7 @@ map <leader>x ddp
 map <leader>s :setlocal spell!<CR>
 map <leader>t :vnew term://bash<CR>
 map <leader>tt :vnew term://powershell<CR>
+map <C-t>:bp<CR>
 
 nnoremap<leader><C-n> :set spelllang=nl<CR>
 nnoremap<leader><C-e> :set spelllang=en_us<CR>
