@@ -47,17 +47,6 @@ highlight SpellRare cterm=NONE ctermbg=NONE
 highlight SpellLocal cterm=Underline ctermbg=NONE
 "}}}
 
-" Automatisch Vim-Plug installeren {{{ 
-let autoload_plug_path = stdpath('data') . '/site/autoload/plug.vim'
-if !filereadable(autoload_plug_path)
-  silent execute '!curl -fLo ' . autoload_plug_path . '  --create-dirs
-      \ "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"'
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-unlet autoload_plug_path
-autocmd! BufEnter * if &ft ==# 'help' | wincmd L | endif
-"}}}
-
 
 " Keybinds {{{
 nmap q <Nop>
@@ -92,7 +81,7 @@ au BufNewFile,BufRead *.md set spelllang=nl
 "}}}
 
 " Plugins via Vim-Plug {{{
-call plug#begin("$HOME/.config/nvim/plugged")
+call plug#begin()
 	" General
 	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-commentary'
